@@ -1,0 +1,23 @@
+name: Python summary regressions
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  summary-tests:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run standard-library summary tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+
+# This does not validate the compositor, shaders, models or GPU performance.
+# Native builds currently require manually provisioned dependencies.

@@ -1,0 +1,49 @@
+# Local build products and IDE state
+/build/
+/build-*/
+/.vs/
+/.vscode/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.obj
+*.onnx
+*.onnx.data
+!tests/fixtures/rife_io_add.onnx
+
+# Downloaded dependencies and weights: supplied separately, never blindly published.
+/external/*
+!/external/README.md
+/models/*
+!/models/README.md
+
+# Private gameplay captures, profiling evidence and historical scratch experiments.
+# Keep just the reviewed helpers required by the Python regression tests.
+/scratch/*
+!/scratch/compare_queue_load.py
+!/scratch/compare_upscaler_fg.py
+!/scratch/summarize_ort_profile.py
+/GEMINI_HANDOFF.md
+/build_adaptive.bat
+/export_rife.py
+/export_rife_fixed.py
+/export_rife_trained.py
+*.backup.*
+*.bak
+*.log
+*.etl
+*.dmp
+imgui.ini
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+credentials.json
