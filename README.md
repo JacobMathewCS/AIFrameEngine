@@ -16,6 +16,7 @@ A fresh clone requires manual dependency provisioning; it is not a one-click ins
 - Optional FP16 inference, GPU preprocessing, and display-image caching.
 - Adaptive buffered playback, retry admission, and completion-aware presentation waits.
 - Bicubic/bilinear scaling and optional reference FSR 1 EASU + RCAS for SDR images.
+- Multiple source resolutions; motion estimation size is independent of game resolution.
 - Sharpening controls, read-only status overlay, and optional presentation identity traces.
 
 Upscaling is spatial, not neural or engine-integrated temporal reconstruction. Frame
@@ -29,8 +30,49 @@ generation does not increase the game's simulation rate or give native-60-FPS in
   models supplied as described in `external/README.md` and `models/README.md`.
 - Python is optional for model export and the additional summary-tool tests.
 
-The tested setup is an RTX 3060 Laptop GPU with Witcher 3 in 720p windowed mode,
-capped at 30 FPS, composited to 1080p SDR. Other configurations require validation.
+Testing has used an RTX 3060 Laptop GPU with Witcher 3 capped at 30 FPS,
+composited to 1080p SDR. Multiple source resolutions have worked in user testing;
+720p has the strongest recorded performance evidence. See the coverage below.
+
+### Resolution support and performance limits
+
+The project is **not restricted to 720p**. Spatial scaling accepts different source
+sizes, and generated midpoints are reconstructed at the captured source resolution.
+Only the motion-estimation network has a fixed 576 x 320 input grid; changing the
+game resolution does not itself require re-exporting that model.
+
+Current coverage in Witcher 3, with a 30 FPS cap and 1920 x 1080 SDR output:
+
+| Source resolution | Evidence / status |
+| --- | --- |
+| 1024 x 768 | User reports working frame generation; no independent display-rate measurement |
+| 1280 x 720 | User reports smooth output; one correlated PresentMon test measured approximately 30 to 58.4 displayed frame identities/sec |
+| 1366 x 768 | User reports working frame generation; no independent display-rate measurement |
+| 1680 x 1050 | User reports working frame generation; no independent display-rate measurement |
+| 1920 x 1080 | **Known unresolved issue:** capture succeeds, but generation can fall to zero; investigation ongoing |
+
+These reports establish multi-resolution operation, not guaranteed FPS doubling at
+every resolution, on every GPU, or in every game. Aspect-ratio preservation and
+image quality at non-16:9 sizes have not been comprehensively validated. Upscaling
+and sharpening have been visually compared at 720p-to-1080p; the other reports do
+not constitute separate upscaler quality measurements. At matching source/output
+sizes there is no spatial enlargement to perform.
+
+### Known issue: 1920 x 1080 frame-generation collapse
+
+This is tracked as a bug/compatibility investigation, **not an intentional 1080p
+source-resolution restriction**. Local logs show late inference results and
+cooldown at 1080p. The user also observes that the game's title bar disappears
+when selecting this resolution, unlike the working smaller sizes. A window-mode
+or presentation-path interaction is therefore a lead, not a confirmed cause;
+a disappearing title bar does not prove exclusive fullscreen. Workload and GPU
+scheduling also remain under investigation.
+
+For now, use a working source resolution if generation stalls at 1080p, or disable
+frame generation with F9 to avoid retaining buffering without useful midpoints.
+Do not assume a native-resolution performance fix is included in this documentation
+update. HDR, exclusive fullscreen, dynamic resizing/minimize/restore, and broad
+game/display compatibility still require further validation.
 
 From a Developer PowerShell, set the absolute checkout path and build:
 
