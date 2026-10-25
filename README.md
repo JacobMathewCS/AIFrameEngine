@@ -7,7 +7,7 @@ and draws intermediate frames in a separate Direct3D compositor. FSR 1 or bicubi
 scaling can enlarge the result to the output resolution. It does not need a game
 plugin or access to the game's motion vectors.
 
-**Publication status:** source, the native desktop launcher, shaders, and native
+**Project status:** source, the native desktop launcher, shaders, and native
 regression tests are available. The launcher builds independently with the Windows
 SDK. A full compositor build still needs manually provisioned dependencies and
 compatible models; this is not a one-click installer. See
@@ -65,7 +65,6 @@ Python, PyTorch, NumPy, ONNX, and onnxsim. See
 Windows SDK APIs provide capture and graphics. No hosted inference API is used in
 the normal runtime. No training dataset is bundled or newly trained model claimed;
 the native I/O test uses a small synthetic ONNX fixture, not pretrained weights.
-The project does not use Gemma or the Gemini API.
 
 ## Build and run
 
@@ -99,26 +98,14 @@ with **Ctrl+Shift+F6**, then press **F9** to toggle frame generation.
 The launcher attaches capture to an already-running game; it does not start the game.
 See [launcher guide](docs/LAUNCHER.md) for an existing compositor in another folder.
 
-## Team
+## Contributing
 
-- **Jacob Mathew** ([JacobMathewCS](https://github.com/JacobMathewCS)) — maintainer;
-  project idea, high-level architecture, and debugging.
-- **Abhilekkh Krishna** ([abhilekkh](https://github.com/abhilekkh)) — ideation,
-  high-level architecture, and debugging.
+See [contributing guidelines](CONTRIBUTING.md) for development, testing, and
+pull request expectations.
 
-## AI assistance
+## Maintainer
 
-The team confirms that **Cline with ChatGPT** was the only AI coding tool/model
-combination used. It produced mathematical reasoning, optimization work, and
-pipeline implementation, and assisted with code/tests, diagnostic analysis, the
-native launcher, and public-release documentation and validation. Jacob and
-Abhilekkh contributed ideation, high-level architecture, and debugging.
-
-AI-generated work was a substantial part of implementation, not just autocomplete.
-AI-produced changes require review and testing; they are not evidence that a
-feature works. Team members remain responsible for understanding and explaining
-the code they submit. This development assistance is separate from **RIFE**, the
-model used by the application at runtime.
+[Jacob Mathew](https://github.com/JacobMathewCS).
 
 ## License
 

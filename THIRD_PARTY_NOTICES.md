@@ -17,8 +17,7 @@ original AIFrameEngine work, not as a replacement for upstream licenses.
 | onnxsim | Simplifying exported graphs | [onnxsim](https://github.com/daquexian/onnx-simplifier) |
 
 Windows SDK APIs provide capture, graphics, and window management. The application
-does not use a hosted AI API in its normal frame-generation path. It does not use
-Gemma, and this release does not claim eligibility for a Gemma-specific prize.
+does not use a hosted AI API in its normal frame-generation path.
 
 ## Release preparation
 
