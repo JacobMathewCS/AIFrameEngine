@@ -110,15 +110,16 @@ model inference, gameplay, or full compositor dependencies.
 
 - **Jacob Mathew** ([JacobMathewCS](https://github.com/JacobMathewCS)) — maintainer;
   project idea, high-level architecture, and debugging.
-- **Abhilekkh Krishna** ([abhilekkh](https://github.com/abhilekkh)) — team member.
+- **Abhilekkh Krishna** ([abhilekkh](https://github.com/abhilekkh)) — ideation,
+  high-level architecture, and debugging.
 
 ## AI assistance
 
 The team confirms that **Cline with ChatGPT** was the only AI coding tool/model
 combination used. It produced mathematical reasoning, optimization work, and
 pipeline implementation, and assisted with code/tests, diagnostic analysis, the
-native launcher, and public-release documentation and validation. Jacob contributed
-the project idea, high-level architecture, and debugging.
+native launcher, and public-release documentation and validation. Jacob and
+Abhilekkh contributed ideation, high-level architecture, and debugging.
 
 AI-generated work was a substantial part of implementation, not just autocomplete.
 AI-produced changes require review and testing; they are not evidence that a
