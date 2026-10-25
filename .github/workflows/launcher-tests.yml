@@ -1,0 +1,24 @@
+name: Windows standalone launcher
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  launcher:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        config: [Release, Debug]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure standalone launcher
+        run: cmake -S . -B build-launcher -A x64 -DAIFRAME_LAUNCHER_ONLY=ON
+      - name: Build
+        run: cmake --build build-launcher --config ${{ matrix.config }} --parallel 2
+      - name: Test configuration and UI startup
+        run: ctest --test-dir build-launcher -C ${{ matrix.config }} --output-on-failure

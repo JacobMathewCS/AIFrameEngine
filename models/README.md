@@ -26,9 +26,29 @@ with copyright attributed to Megvii Inc. Model provenance and the applicable
 checkpoint terms will be recorded before redistributing the converted weights;
 the root project license is not a replacement for upstream permissions.
 
-No models are downloadable from this repository at this publication stage. The
+No pretrained models are downloadable from this repository at this publication stage. The
 model release needs checksums, retained notices, and validated provisioning steps.
 Generic RIFE image-output models are not interchangeable with these flow exports.
 
 EDSR, legacy image-output RIFE models, and corrupted backups are not needed for the
 normal flow-reconstruction configuration and will not be included in that package.
+
+## Manual setup and exporter limits
+
+Place the two flow files listed above in this directory before building the full
+application. Both are required for the default FP16 launcher selection: the current
+compositor checks for the FP32 file before enabling the flow path. Choose FP32 in
+the launcher if only the FP32 flow export is available.
+
+The included `export_rife_flow.py` and `export_rife_fg.py` are research exporters,
+not a pinned, one-command provisioning system. The flow exporter requires Python,
+PyTorch, NumPy, ONNX, onnxsim, and an ONNX Runtime Python installation with the
+DirectML provider. It downloads upstream source/checkpoint code and executes that
+code: inspect it and verify provenance before use. Its default GPU device index is
+1; specify `--device` for your actual DirectML adapter. It validates reconstruction
+and inference before copying the FP32 result into local model/build folders.
+
+It does not currently provide the FP16 conversion/provisioning stage. Upstream
+source is not pinned, export dependencies are not locked, and clean-machine export
+has not been validated for this publication. These are release blockers for an
+automatic setup or ready-to-run bundle, not requirements silently handled by CMake.

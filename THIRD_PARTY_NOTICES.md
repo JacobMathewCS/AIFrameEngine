@@ -1,7 +1,7 @@
 # Third-party components
 
-This first publication stage contains documentation, not bundled third-party
-source, runtime libraries, or model weights. The project MIT license applies to
+This source publication does not bundle downloaded third-party SDK source,
+runtime libraries, or pretrained model weights. The project MIT license applies to
 original AIFrameEngine work, not as a replacement for upstream licenses.
 
 | Component | Role | Upstream |
@@ -28,6 +28,6 @@ The working FSR 1 headers were recorded at revision
 The local ONNX Runtime DLL reports `1.24.20260316.9.2d92497`; this file version alone
 is not a pinned package specification.
 
-Before source or binary publication, retain the notices for the actual dependency
+Before dependency or binary bundling, retain the notices for the actual dependency
 versions, document reproducible acquisition steps, and verify model distribution
 terms separately. No training dataset or private gameplay capture is included.
