@@ -99,13 +99,6 @@ with **Ctrl+Shift+F6**, then press **F9** to toggle frame generation.
 The launcher attaches capture to an already-running game; it does not start the game.
 See [launcher guide](docs/LAUNCHER.md) for an existing compositor in another folder.
 
-The maintainer reports a successful real-game launch with frame generation and
-upscaling through the GUI. This is user-reported gameplay validation, not a new
-benchmark or confirmation that the native-1080p limitation is fixed.
-
-CI builds and tests the standalone launcher only. It does not validate DirectML,
-model inference, gameplay, or full compositor dependencies.
-
 ## Team
 
 - **Jacob Mathew** ([JacobMathewCS](https://github.com/JacobMathewCS)) — maintainer;
