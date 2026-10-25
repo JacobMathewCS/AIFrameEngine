@@ -39,10 +39,13 @@ event-day implementation.
 
 Other owner/organizer checks still required:
 
-- Confirm a 2–4-person roster; each member must satisfy student/age, registration
-  and in-person check-in requirements. Solo entries are not allowed.
-- Complete every AI coding tool/model name and the parts it produced, in both the
-  README and submission. Current disclosure is explicitly incomplete.
+- The maintainer has confirmed the two-person roster: Jacob Mathew and Abhilekkh
+  Krishna. Each member must still satisfy student/age, registration and in-person
+  check-in requirements; those facts have not been verified here.
+- The README records the maintainer-confirmed AI disclosure: Cline with ChatGPT
+  for mathematics, optimization and pipeline implementation, plus the documented
+  development assistance; Jacob supplied the idea, high-level architecture and
+  debugging. Carry the same disclosure into the OrganizerHQ submission.
 - Confirm model terms and applicable challenge eligibility with the organizers.
 - Submit through OrganizerHQ before 5:00 PM IST using the registered account;
   repository publication alone is not a submission. Demo URL is optional.

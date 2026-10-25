@@ -106,21 +106,25 @@ benchmark or confirmation that the native-1080p limitation is fixed.
 CI builds and tests the standalone launcher only. It does not validate DirectML,
 model inference, gameplay, or full compositor dependencies.
 
-## Maintainer
+## Team
 
-Maintainer: Jacob Mathew ([JacobMathewCS](https://github.com/JacobMathewCS)).
-The complete event team roster still needs to be confirmed before the submission
-is finalized.
+- **Jacob Mathew** ([JacobMathewCS](https://github.com/JacobMathewCS)) — maintainer;
+  project idea, high-level architecture, and debugging.
+- **Abhilekkh Krishna** ([abhilekkh](https://github.com/abhilekkh)) — team member.
 
 ## AI assistance
 
-Cline was used for code/test assistance, diagnostic analysis, the native launcher,
-and public-release documentation and validation. The maintainer also reports using
-another AI model for repository changes; its name and contribution scope have not
-yet been confirmed. The full historical tool/model list and contribution breakdown
-remain incomplete. This section must not be treated as a complete event disclosure.
+The team confirms that **Cline with ChatGPT** was the only AI coding tool/model
+combination used. It produced mathematical reasoning, optimization work, and
+pipeline implementation, and assisted with code/tests, diagnostic analysis, the
+native launcher, and public-release documentation and validation. Jacob contributed
+the project idea, high-level architecture, and debugging.
+
+AI-generated work was a substantial part of implementation, not just autocomplete.
 AI-produced changes require review and testing; they are not evidence that a
-feature works. Team members must be able to explain the code they submit.
+feature works. Team members remain responsible for understanding and explaining
+the code they submit. This development assistance is separate from **RIFE**, the
+model used by the application at runtime.
 
 ## License
 
