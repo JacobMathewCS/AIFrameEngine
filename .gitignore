@@ -1,0 +1,43 @@
+# Build outputs and editor state
+/build/
+/build-*/
+/.vs/
+/.vscode/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.obj
+
+# Models and third-party downloads require a separate distribution review.
+*.onnx
+*.onnx.data
+*.pkl
+*.pt
+*.pth
+/external/*
+!/external/README.md
+
+# Local experiments and evidence are not release contents.
+/scratch/
+/GEMINI_HANDOFF.md
+*.log
+*.etl
+*.dmp
+*.bak
+*.backup.*
+imgui.ini
+
+# Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+credentials.json
