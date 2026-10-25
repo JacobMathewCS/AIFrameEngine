@@ -54,17 +54,11 @@ ONNX Runtime DirectML, Dear ImGui, and AMD FidelityFX FSR 1. Model export uses
 Python, PyTorch, NumPy, ONNX, and onnxsim. See
 [third-party notes](THIRD_PARTY_NOTICES.md).
 
-## Project history and hackathon participation
-
-AIFrameEngine existed before the October 25, 2026 hackathon. The maintainer reports
-that the organizers approved using this existing project. Participation relies on
-that exception; this repository does not claim that all implementation was written
-during the event. The commits here record the public-release preparation stages,
-not the original implementation timeline.
+## Maintainer
 
 Maintainer: Jacob Mathew ([JacobMathewCS](https://github.com/JacobMathewCS)).
-The event team roster and the scope of event-day changes still need to be confirmed
-before the submission is finalized.
+The complete event team roster still needs to be confirmed before the submission
+is finalized.
 
 ## AI assistance
 
