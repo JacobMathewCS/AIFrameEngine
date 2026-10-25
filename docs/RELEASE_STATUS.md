@@ -26,32 +26,3 @@ review; the source release makes no claim to include those tests.
 The maintainer has reported working GUI-launched gameplay, interpolation and
 upscaling. Native 1080p frame generation remains a known limitation. No new FPS or
 latency claims follow from that report.
-
-## Event submission checks (not an eligibility certification)
-
-The supplied Hacktoberfest x MOSS Hack Day Udupi rulebook specifies build time of
-10:00 AM to 5:00 PM IST on October 25, 2026. It disallows bringing pre-event project
-code/materials and open-sourcing one's earlier work just to use it at the event.
-AIFrameEngine includes pre-event work. Restoring or publishing this repository
-does not make it eligible; disclose that fact to the organizers and obtain their
-decision before submitting. Do not alter history or represent prior work as
-event-day implementation.
-
-Other owner/organizer checks still required:
-
-- The maintainer has confirmed the two-person roster: Jacob Mathew and Abhilekkh
-  Krishna. Each member must still satisfy student/age, registration and in-person
-  check-in requirements; those facts have not been verified here.
-- The README records the maintainer-confirmed AI disclosure: Cline with ChatGPT
-  for mathematics, optimization and pipeline implementation, plus the documented
-  development assistance; Jacob supplied the idea, high-level architecture and
-  debugging. Carry the same disclosure into the OrganizerHQ submission.
-- Confirm model terms and applicable challenge eligibility with the organizers.
-- Submit through OrganizerHQ before 5:00 PM IST using the registered account;
-  repository publication alone is not a submission. Demo URL is optional.
-- Do not select the Gemma challenge: this project has no Gemma/Gemini integration.
-- Keep the repository public after the event. No other-event submission claim is
-  made; the team must confirm that requirement.
-- Observe the rulebook's stop-building deadline and limited demo-bug exception.
-
-No OrganizerHQ submission or statement of eligibility has been made by this release.
